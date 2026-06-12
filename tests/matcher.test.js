@@ -44,3 +44,8 @@ test('match: limit 개수만큼만 반환한다', () => {
 test('match: 일치 항목이 없으면 빈 배열', () => {
     assert.deepEqual(match(halls, '존재하지않는홀'), []);
 });
+
+test('match: halls가 배열이 아니면 빈 배열', () => {
+    assert.deepEqual(match(null, '웨딩'), []);
+    assert.deepEqual(match(undefined, '웨딩'), []);
+});

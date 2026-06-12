@@ -2,6 +2,9 @@ const HallMatcher = (() => {
     const normalize = (str) => String(str ?? '').toLowerCase().replace(/\s+/g, '');
 
     const match = (halls, query, limit = 10) => {
+        if (!Array.isArray(halls)) {
+            return [];
+        }
         const q = normalize(query);
         if (!q) {
             return [];
