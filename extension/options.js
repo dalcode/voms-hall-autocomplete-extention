@@ -34,11 +34,15 @@ document.getElementById('save').addEventListener('click', async () => {
 
 document.getElementById('refresh').addEventListener('click', async () => {
     showStatus('갱신 중...');
-    const result = await chrome.runtime.sendMessage({ type: 'refreshHalls' });
-    if (result?.ok) {
-        await showCacheInfo();
-    } else {
-        showStatus(`갱신 실패: ${result?.error ?? '알 수 없는 오류'}`, true);
+    try {
+        const result = await chrome.runtime.sendMessage({ type: 'refreshHalls' });
+        if (result?.ok) {
+            await showCacheInfo();
+        } else {
+            showStatus(`갱신 실패: ${result?.error ?? '알 수 없는 오류'}`, true);
+        }
+    } catch (err) {
+        showStatus(`갱신 실패: ${err.message ?? err}`, true);
     }
 });
 
