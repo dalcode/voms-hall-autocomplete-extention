@@ -9,8 +9,7 @@
     "content_scripts": [
         {
             "matches": [
-                "https://bliuscompany.weddingit.co.kr/custom/member_write.php*",
-                "file:///*"
+                "https://bliuscompany.weddingit.co.kr/custom/member_write.php*"
             ],
             "all_frames": true,
             "js": ["matcher.js", "content.js"],
