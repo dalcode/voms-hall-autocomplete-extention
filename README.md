@@ -1,6 +1,6 @@
 # VOMS 웨딩홀 자동완성
 
-웨딩잇 CRM(`bliuscompany.weddingit.co.kr`) 고객등록 폼의 **본식 장소** 입력란에, VOMS에 등록된 웨딩홀 목록을 자동완성으로 제공하는 Chrome 확장프로그램입니다.
+CRM(`bliuscompany.weddingit.co.kr`) 고객등록 폼의 **본식 장소** 입력란에, VOMS에 등록된 웨딩홀 목록을 자동완성으로 제공하는 Chrome 확장프로그램입니다.
 
 [Chrome 웹스토어에서 설치](https://chromewebstore.google.com/detail/cpnjnddllghgohgjkkaldaglpgbjpokj)
 
